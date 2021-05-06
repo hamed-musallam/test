@@ -1,15 +1,16 @@
 name : test name
 on: push
 jobs:
+  print values:
     steps:
       -run: |
               var fs = require('fs');
               var values = fs.readFileSync('./test.txt');
-              echo values;
+              console.log(values);
       - name: 'test save'
         uses: actions/github-script@v3
         with:
            run: |
               var fs = require('fs');
               var values = fs.readFileSync('./test.txt');
-              echo values;
+              console.log(values);
