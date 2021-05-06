@@ -1,0 +1,6 @@
+name : test name
+on: push
+script: |
+        var fs = require('fs');
+        var values = fs.readFileSync('./test.txt');
+       console.log(values);
