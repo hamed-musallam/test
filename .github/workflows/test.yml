@@ -3,12 +3,8 @@ on: push
 jobs:
   print values:
     steps:
-      -run: |
-              var fs = require('fs');
-              var values = fs.readFileSync('./test.txt');
-              console.log(values);
       - name: 'test save'
-        uses: actions/github-script@v3
+        uses: actions/github-script@v4
         with:
            run: |
               var fs = require('fs');
