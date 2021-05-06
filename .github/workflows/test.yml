@@ -2,10 +2,10 @@ name : test name
 on: push
 jobs:
     steps:
-      name: 'test save'
-      uses: actions/github-script@v3
-      with:
-        script: |
+      - name: 'test save'
+        uses: actions/github-script@v3
+        with:
+           script: |
               var fs = require('fs');
               var values = fs.readFileSync('./test.txt');
               console.log(values);
