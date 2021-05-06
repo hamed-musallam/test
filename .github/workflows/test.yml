@@ -6,7 +6,7 @@ jobs:
       - name: 'test save'
         uses: actions/github-script@v4
         with:
-           run: |
+           script: |
               var fs = require('fs');
               var values = fs.readFileSync('./test.txt');
               console.log(values);
