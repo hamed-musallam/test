@@ -9,5 +9,5 @@ jobs:
         with:
            script: |
               var fs = require('fs');
-              var values = fs.readFileSync('./test.txt');
+              var values = fs.readFileSync('${{github.workspace}}/test.txt');
               console.log(values);
