@@ -2,6 +2,7 @@ name : test name
 on: push
 jobs:
   print values:
+    runs-on: ubuntu-latest
     steps:
       - name: 'test save'
         uses: actions/github-script@v4
