@@ -1,7 +1,7 @@
 name : test name
 on: push
 jobs:
-  print values:
+  printvalues:
     runs-on: ubuntu-latest
     steps:
       - name: 'test save'
