@@ -1,0 +1,20 @@
+name: test ymal
+on: push
+jobs:
+  job1:
+    name: first job
+    runs-on: windows-latest
+    steps:
+      - name: steps one
+        uses: actions/checkout@v4
+      - name: steps two
+        run: echo "test is working"
+
+  job2:
+    name: second job
+    runs-on: ubuntu-latest
+    steps:
+      - name: strps one
+        uses: actions/checkout@v4
+      - name: steps two
+        run: env | sort
