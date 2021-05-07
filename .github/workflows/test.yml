@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'test save'
-        uses: actions/github-script@v4
+        uses: actions/github-script@v2
         with:
            script: |
               var fs = require('fs');
