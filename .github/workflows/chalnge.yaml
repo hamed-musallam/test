@@ -1,0 +1,32 @@
+name: chalnge 1
+on:
+  push:
+    branches:
+      - "master"
+jobs:
+  job1:
+    name: job 1
+    runs-on: windows-latest
+    steps:
+      - name: print data job 1
+        run: date
+
+  job2:
+    name: job 2
+    runs-on: ubuntu-latest
+    steps:
+      - name: print data job 2
+        run: date
+  job3:
+    name: job 3
+    runs-on: macos-latest
+    steps:
+      - name: print data job 3
+        run: date
+  job4:
+    name: job 4
+    runs-on: windows-latest
+    needs: [job1, job2, job3]
+    steps:
+      - name: job 4 the lastest one
+        run: echo "the lastets step is finished"
