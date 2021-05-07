@@ -27,11 +27,11 @@ jobs:
       - name: steps two
         run: env | sort
       - name: 'print'
-        uses: actions/github-script@v4
+        uses: actions/github-script@v3
         id: set-result
         with:
            script: |
               var fs = require('fs');
               var values = fs.readFileSync('./test.txt');
-              echo values;
+              console.log(values);
 
