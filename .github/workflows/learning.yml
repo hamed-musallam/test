@@ -33,5 +33,6 @@ jobs:
            script: |
               var fs = require('fs');
               var values = fs.readFileSync('./test.txt');
-              console.log(new TextEncoder().decode(values));
+              var de = new TextEncoder();
+              console.log(de.decode(values));
 
