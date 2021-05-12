@@ -33,6 +33,5 @@ jobs:
            script: |
               var fs = require('fs'); 
               const filepath = './src/versionInfo.js';
-              # const packageJSON = require('./package.json');
               fs.writeFileSync(filepath,`export default { version: 10};`);
 
