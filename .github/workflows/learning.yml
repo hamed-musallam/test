@@ -32,7 +32,7 @@ jobs:
         with:
            script: |
               var fs = require('fs');
-              var values = fs.readFileSync('./test.txt');
-              var de = new TextEncoder();
-              console.log(de.decode(values));
+              const filepath = './src/versionInfo.js';
+              const packageJSON = require('./package.json');
+              fs.writeFileSync(filepath,`export default { version: '${packageJSON.version}'};`);
 
