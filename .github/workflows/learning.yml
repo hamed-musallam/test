@@ -31,8 +31,8 @@ jobs:
         id: set-result
         with:
            script: |
-              var fs = require('fs');
+              var fs = require('fs'); 
               const filepath = './src/versionInfo.js';
               const packageJSON = require('./package.json');
-              fs.writeFileSync(filepath,`export default { version: '${packageJSON.version}'};`);
+              fs.writeFileSync(filepath,`export default { version:'${packageJSON.version}'};`);
 
